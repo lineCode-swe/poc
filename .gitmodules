@@ -1,0 +1,9 @@
+[submodule "poc_server"]
+	path = poc_server
+	url = git@github.com:lineCode-swe/poc_server.git
+[submodule "poc_ui"]
+	path = poc_ui
+	url = git@github.com:lineCode-swe/poc_ui.git
+[submodule "poc_unit"]
+	path = poc_unit
+	url = git@github.com:lineCode-swe/poc_unit.git
