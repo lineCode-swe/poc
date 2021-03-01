@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# exit when any command fails
+set -e
+# keep track of the last executed command
+trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
+# echo an error message before exiting
+trap 'echo "\"${last_command}\" command filed with exit code $?."' EXIT
+
+
+echo "This script prepares the project to be run with docker-compose. Dependences: maven, docker.";
+echo;
+
+echo "STEP1: Creating server's standalone jar";
+(cd poc_server;
+ mvn package)
+echo;
+
+echo "STEP2: Building unit Docker image";
+docker build -t poc_unit poc_unit
+echo;
+
+echo;
+echo "Done. Now you can run:";
+echo;
+echo "    docker-compose up";
+echo;
+echo "followed by:";
+echo;
+echo "    ./start_unit.bash";
+echo;
+

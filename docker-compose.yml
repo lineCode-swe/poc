@@ -1,9 +1,9 @@
 version: "3.9"
 services:
-  
-  server:
-    build: poc_server
-    ports:
-      - "8080:8080"
 
-  
+  server:
+    build:
+      context: poc_server
+      network: host
+    ports:
+      - 8080:8080
