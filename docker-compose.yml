@@ -3,7 +3,12 @@ services:
 
   server:
     build:
-      context: poc_server
-      network: host
+      context: ./poc_server
     ports:
       - 8080:8080
+
+  ui:
+    build:
+      context: ./poc_ui
+    ports:
+    - 8081:8081

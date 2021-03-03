@@ -8,15 +8,23 @@ trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG
 trap 'echo "\"${last_command}\" command filed with exit code $?."' EXIT
 
 
-echo "This script prepares the project to be run with docker-compose. Dependences: maven, docker.";
+echo "This script prepares the project to be run with docker-compose. Dependences: maven, docker, node.";
 echo;
 
 echo "STEP1: Creating server's standalone jar";
 (cd poc_server;
- mvn package)
+ mvn package;
+)
 echo;
 
-echo "STEP2: Building unit Docker image";
+echo "STEP2: Building Angular app";
+(cd poc_ui;
+ npm install;
+ ng build --prod;
+)
+echo; 
+
+echo "STEP3: Building unit Docker image";
 docker build -t poc_unit poc_unit
 echo;
 
