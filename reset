@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "STEP1: Deleting server artifacts";
+rm -rfv poc_server/target;
+echo;
+
+echo "STEP2: Deleting UI artifacts and dependences";
+rm -rfv poc_ui/node_modules;
+rm -rfv poc_ui/dist;
+echo;
+
+echo "STEP3: Deleting existing Docker images";
+docker image rm poc_server poc_unit poc_ui;
+echo;
+
+echo "Done. Bye!"

@@ -17,3 +17,8 @@ Posizionarsi sulla root della repo ed eseguire i comandi seguenti:
 docker-compose up
 ./start_unit
 ```
+
+Per cancellare gli artefatti creati dalle istruzioni precedenti:
+```shell
+./reset
+```
