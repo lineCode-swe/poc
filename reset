@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "This script deletes every submodule artifact and related Docker images";
+echo;
+
 echo "STEP1: Deleting server artifacts";
 rm -rfv poc_server/target;
 echo;
@@ -10,6 +13,7 @@ rm -rfv poc_ui/dist;
 echo;
 
 echo "STEP3: Deleting existing Docker images";
+docker-compose down;
 docker image rm poc_server poc_unit poc_ui;
 echo;
 
