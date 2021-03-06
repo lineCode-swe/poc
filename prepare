@@ -35,5 +35,5 @@ echo "    docker-compose up";
 echo;
 echo "followed by:";
 echo;
-echo "    ./start_unit.bash";
+echo "    ./start_unit";
 echo;
