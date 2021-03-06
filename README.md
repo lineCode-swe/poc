@@ -9,8 +9,8 @@ L'applicativo funge da PoC e simula il comportamento di tre componenti fondament
 Le tre componenti sono:
 
 1. Server con mappa e motore di calcolo del percorso: [poc_server](https://github.com/lineCode-swe/poc_server)
-2. Interfaccia grafica per la visualizzazione della mappa in tempo reale  [poc_ui](https://github.com/lineCode-swe/poc_ui)
-3. Unità mobile all'interno della mappa [poc_unit](https://github.com/lineCode-swe/poc_unit)
+2. Interfaccia grafica per la visualizzazione della mappa in tempo reale: [poc_ui](https://github.com/lineCode-swe/poc_ui)
+3. Unità mobile all'interno della mappa: [poc_unit](https://github.com/lineCode-swe/poc_unit)
 
 ## Installazione, dipendenze ed esecuzione
 Dipendenze:
